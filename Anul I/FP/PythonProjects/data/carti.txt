@@ -1,0 +1,6 @@
+101,Dune,Un roman clasic despre dragoste și prejudecăți în Anglia secolului XIX,Frank Herbert, 20
+102,1984,O distopie despre un viitor controlat de supraveghere totalitară,George Orwell, 20
+103,Room,Un roman captivant despre supraviețuire,Emma Donoghue, 20
+104,Jazz,O meditație asupra iubirii,Toni Morrison, 20
+105,Heat,O poveste despre pasiunea pentru baseball și relațiile de familie,Mike Lupica, 20
+106,Dane,Frumos,Frank Herbert, 20
