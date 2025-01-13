@@ -1,0 +1,58 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit
+     8                                  extern printf                ; declare printf as an external function
+     9                                  import exit msvcrt.dll
+    10                                  import printf msvcrt.dll     ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+    11                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    12                                  
+    13                                  ; our data is declared here (the b needed by our program)
+    14                                  segment data use32 class=data
+    15                                      ; ...
+    16 00000000 56616C7565206F6620-         format db "Value of C: %02X", 10, 0
+    16 00000009 433A20253032580A00 
+    17 00000012 6745230100000000            a dq 1234567h
+    18 0000001A <res 00000004>              b resd 1
+    19 0000001E <res 00000001>              c resb 1
+    20                                      
+    21                                  
+    22                                  ; our code starts here
+    23                                  segment code use32 class=code
+    24                                      start:
+    25                                          ; ...
+    26 00000000 A1[16000000]                    mov eax, dword[a+4] ; mutam partea superioara a lui x in eax
+    27 00000005 C1E803                          shr eax, 3 ; mutarea bititlor spre dreapta
+    28 00000008 83E007                          and eax, 07h ; aplicam masca pentru a retine doar primii 3 biti
+    29                                          
+    30 0000000B 89C1                            mov ecx, eax ; ecx = n si cl = n
+    31                                          
+    32 0000000D A1[12000000]                    mov eax, dword[a] ; incarcam partea inferioara a lui a in eax
+    33 00000012 D3C8                            ror eax, cl ; rotim eax spre dreapta cu n biti
+    34 00000014 A3[1A000000]                    mov [b] , eax ; punem rezultaul in b
+    35                                          
+    36                                          ;bitii 0-3 ai lui C sunt bitii 8-11 ai lui B
+    37                                          ;bitii 4-7 ai lui C sunt bitii 16-19 ai lui B
+    38                                          
+    39 00000019 A1[1A000000]                    mov eax, [b] ; eax = b
+    40 0000001E 89C2                            mov edx, eax ; edx = [b]
+    41                                          
+    42 00000020 C1E808                          shr eax, 8 ; deplasam valoarea din b cu 8 biti pentru a aduce bitii 8-11 pe 0-3
+    43 00000023 83E00F                          and eax , 00fh ; aplicam masca pentru a retine daor bitii 0-3
+    44                                          
+    45 00000026 C1EA10                          shr edx, 16 ; deplasam valoarea lui b cu 16 biti pentru a aduce bitii 16-19 pe 0-3
+    46 00000029 83E20F                          and edx, 00fh ; aplicam masca pentru a retine doar bitii 0-3
+    47 0000002C C1E204                          shl edx, 4 ; deplasam bitii la stanga cu 4 pozitii pentru a ajunge pe 4-7
+    48                                          
+    49 0000002F 09D0                            or eax, edx ; combinam bitii pentru a forma octetul c
+    50 00000031 A2[1E000000]                    mov [c], al
+    51 00000036 FF35[1E000000]                  push dword [c]      ; Push the value of `C` onto the stack as a parameter for printf
+    52 0000003C 68[00000000]                    push dword format   ; Push the address of the format string
+    53 00000041 FF15[00000000]                  call [printf] 
+    54                                          
+    55                                          ; exit(0)
+    56 00000047 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    57 00000049 FF15[00000000]                  call    [exit]       ; call exit to terminate the program
