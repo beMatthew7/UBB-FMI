@@ -1,0 +1,5 @@
+Santa Claus Main PostOffice, NorthPole, letter, 40
+Santa’s Toy Factory, SantaClausVillage, toy, 205
+Gingerbread Workshop, NorthPole, gingerbread, 19
+Santa’s Office, NorthPole, wishform, 52
+Christmas Decorations Factory, BellStreet, decoration, 156
