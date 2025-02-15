@@ -1,5 +1,0 @@
-1,Standard A,2.5Gh,HDD,0.05$
-2,Standard B,3.7Gh,HDD,0.07$
-3,Standard A,4.5Gh,SSD,0.1$
-4,Premium B,5.8Gh,SSD,0.15$
-5,Elite A,6.0Gh,SSD Ultra,0.2$

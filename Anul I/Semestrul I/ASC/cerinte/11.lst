@@ -1,0 +1,104 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, gets, fopen, fprintf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll 
+     9                                  import gets msvcrt.dll
+    10                                  import fopen msvcrt.dll
+    11                                  import fprintf msvcrt.dll   ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+    12                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    13                                  
+    14                                  ; our data is declared here (the variables needed by our program)
+    15                                  segment data use32 class=data
+    16                                      ; ...
+    17 00000000 00<rept>                    cuvinte times 200 db 0
+    18 000000C8 00<rept>                    file_name times 30 db 0
+    19 000000E6 7700                        acces_mode db "w", 0
+    20 000000E8 FFFFFFFF                    file_descriptor dd -1
+    21 000000EC 25730A00                    format_afisare db '%s', 10, 0
+    22 000000F0 00<rept>                    cuvant times 50 db 0
+    23 00000122 30000000                    i dd 48
+    24                                      
+    25                                  ; our code starts here
+    26                                  segment code use32 class=code
+    27                                      start:
+    28                                          ; ...
+    29 00000000 68[00000000]                    push cuvinte
+    30 00000005 FF15[00000000]                  call [gets]
+    31 0000000B 83C404                          add esp, 4
+    32                                          
+    33 0000000E BE[00000000]                    mov esi, cuvinte
+    34 00000013 BF[C8000000]                    mov edi, file_name
+    35                                          
+    36                                          citire_nume
+    36          ******************       warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+    37 00000018 AC                                  lodsb
+    38 00000019 3C20                                cmp al, ' '
+    39 0000001B 7403                                je nume_complet
+    40 0000001D AA                                  stosb
+    41 0000001E EBF8                                jmp citire_nume
+    42                                              
+    43                                              
+    44                                          nume_complet:
+    45 00000020 B02E                                mov al, '.'
+    46 00000022 AA                                  stosb
+    47 00000023 B074                                mov al, 't'
+    48 00000025 AA                                  stosb
+    49 00000026 B078                                mov al, 'x'
+    50 00000028 AA                                  stosb
+    51 00000029 B074                                mov al, 't'
+    52 0000002B AA                                  stosb
+    53                                              
+    54 0000002C 68[E6000000]                    push acces_mode
+    55 00000031 68[C8000000]                    push file_name
+    56 00000036 FF15[00000000]                  call [fopen]
+    57 0000003C 83C408                          add esp, 2 * 4
+    58                                          
+    59 0000003F 83F800                          cmp eax, 0
+    60 00000042 7437                            je final
+    61                                          
+    62 00000044 A3[E8000000]                    mov dword[file_descriptor], eax
+    63                                          
+    64 00000049 8D3D[20010000]                  lea edi, [cuvant + 48]
+    65                                          citire_cuvinte:
+    66 0000004F AC                                  lodsb
+    67 00000050 3C00                                cmp al, 0
+    68 00000052 7427                                je final
+    69 00000054 3C20                                cmp al, ' '
+    70 00000056 7405                                je afisare_in_fisier
+    71 00000058 8807                                mov [edi], al
+    72 0000005A 4F                                  dec edi
+    73 0000005B EBF2                                jmp citire_cuvinte
+    74                                              
+    75                                          
+    76                                          
+    77                                          
+    78                                          afisare_in_fisier:
+    79 0000005D 47                                  inc edi
+    80 0000005E 57                                  push edi
+    81 0000005F 68[EC000000]                        push format_afisare
+    82 00000064 FF35[E8000000]                      push dword[file_descriptor]
+    83 0000006A FF15[00000000]                      call [fprintf]
+    84 00000070 83C40C                              add esp, 3 * 4
+    85 00000073 8D3D[20010000]                      lea edi, [cuvant + 48]
+    86 00000079 EBD4                                jmp citire_cuvinte
+    87                                              
+    88                                          
+    89                                          
+    90                                          
+    91                                          
+    92                                          final:
+    93 0000007B 47                              inc edi
+    94 0000007C 57                                  push edi
+    95 0000007D 68[EC000000]                        push format_afisare
+    96 00000082 FF35[E8000000]                      push dword[file_descriptor]
+    97 00000088 FF15[00000000]                      call [fprintf]
+    98 0000008E 83C40C                              add esp, 3 * 4
+    99                                          
+   100                                      
+   101                                          ; exit(0)
+   102 00000091 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   103 00000093 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

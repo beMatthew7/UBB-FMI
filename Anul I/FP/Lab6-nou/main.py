@@ -1,5 +1,0 @@
-from ui_nou import run
-from teste import test_adaugare_la_lista, test_calatorii_cautate_data_final, test_calatorii_cautate_date,test_calatorii_cautate_destinatie_pret,test_creare_pachet,test_eliminare_oferte_pret,test_verificare_data, ruleaza_teste
-
-ruleaza_teste()
-run()

@@ -1,0 +1,154 @@
+     1                                  ; Se citeste de la tastatura un nume de fisier, un caracter c si un numar n. Sa se determine daca numarul de aparitii ale caracterului c in textul fisierului este egal cu numarul n, afisandu-se la consola un mesaj c
+     2                                  
+     3                                  ; Read from the console a file name, a character c, and a number n. Determine if the number of occurrences of the character c from the text file is equal with n, and write the corresponding message to the console (w
+     4                                  
+     5                                  ; Example:
+     6                                  
+     7                                  ; c = a
+     8                                  
+     9                                  ; n = 2
+    10                                  
+    11                                  ; Input.txt
+    12                                  
+    13                                  ; ana are alte mere alina are doar pere
+    14                                  
+    15                                  ; Console:
+    16                                  
+    17                                  ; Numarul de aparitii al caracterului a citit nu este egal cu numarul 2 citit./
+    18                                  
+    19                                  ; The number of occurrences of the character a is not equal to the read number 2.
+    20                                  bits 32 ; assembling for the 32 bits architecture
+    21                                  
+    22                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+    23                                  global start        
+    24                                  
+    25                                  ; declare external functions needed by our program
+    26                                  extern exit, scanf, fopen, printf, fclose, fread              ; tell nasm that exit exists even if we won't be defining it
+    27                                  import exit msvcrt.dll 
+    28                                  import scanf msvcrt.dll
+    29                                  import fopen msvcrt.dll
+    30                                  import printf msvcrt.dll
+    31                                  import fclose msvcrt.dll 
+    32                                  import fread msvcrt.dll ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+    33                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    34                                  
+    35                                  ; our data is declared here (the variables needed by our program)
+    36                                  segment data use32 class=data
+    37                                      ; ...
+    38 00000000 00<rept>                    file_name times 50 db 0
+    39 00000032 7200                        acces_mode db "r", 0
+    40 00000034 00000000                    c dd 0
+    41 00000038 00000000                    n dd 0
+    42 0000003C 257320256320256400          format_citire db "%s %c %d", 0
+    43 00000045 FFFFFFFF                    file_descriptor dd -1
+    44 00000049 00<rept>                    text times 501 db 0
+    45 0000023E 00000000                    nr_aparitii dd 0
+    46 00000242 4E756D6172756C2064-         format_afisare_nu db "Numarul de aparitii al caracterului %c nu este egal cu numarul %d citit", 0
+    46 0000024B 652061706172697469-
+    46 00000254 6920616C2063617261-
+    46 0000025D 63746572756C756920-
+    46 00000266 2563206E7520657374-
+    46 0000026F 65206567616C206375-
+    46 00000278 206E756D6172756C20-
+    46 00000281 256420636974697400 
+    47 0000028A 4E756D6172756C2064-         format_afisare_da db "Numarul de aparitii al caracterului %c este egal cu numarul %d citit", 0
+    47 00000293 652061706172697469-
+    47 0000029C 6920616C2063617261-
+    47 000002A5 63746572756C756920-
+    47 000002AE 256320657374652065-
+    47 000002B7 67616C206375206E75-
+    47 000002C0 6D6172756C20256420-
+    47 000002C9 636974697400       
+    48                                      
+    49                                  
+    50                                  ; our code starts here
+    51                                  segment code use32 class=code
+    52                                      start:
+    53                                          ; ...
+    54                                          ;citire nume fisier, caracter c, numarul n
+    55 00000000 68[38000000]                    push n
+    56 00000005 68[34000000]                    push c
+    57 0000000A 68[00000000]                    push file_name
+    58 0000000F 68[3C000000]                    push format_citire
+    59 00000014 FF15[00000000]                  call [scanf]
+    60 0000001A 83C410                          add esp, 4 * 4
+    61                                          
+    62                                          
+    63                                          ;deschidere fisier
+    64 0000001D 68[32000000]                    push acces_mode
+    65 00000022 68[00000000]                    push file_name
+    66 00000027 FF15[00000000]                  call [fopen]
+    67 0000002D 83C408                          add esp, 2 * 4
+    68                                          
+    69                                          ;verificam daca s-a deschis corect fisierul
+    70 00000030 83F800                          cmp eax, 0
+    71 00000033 0F8493000000                    je eroare
+    72                                          
+    73 00000039 A3[45000000]                    mov dword[file_descriptor], eax
+    74                                          
+    75                                          ;citire text fisier
+    76                                        
+    77 0000003E FF35[45000000]                  push dword[file_descriptor]
+    78 00000044 68F4010000                      push 500
+    79 00000049 6A01                            push 1
+    80 0000004B 68[49000000]                    push text
+    81 00000050 FF15[00000000]                  call [fread]
+    82 00000056 83C410                          add esp, 4 * 4
+    83                                          
+    84 00000059 BE[49000000]                    mov esi, text
+    85                                          
+    86                                          parcurgere_caractere_fisier:
+    87 0000005E AC                                  lodsb
+    88 0000005F 3C00                                cmp al, 0
+    89 00000061 7413                                je verificare_nr_aparitii
+    90 00000063 8A1D[34000000]                      mov bl, [c]
+    91 00000069 38D8                                cmp al, bl
+    92 0000006B 75F1                                jne parcurgere_caractere_fisier
+    93                                              
+    94 0000006D 8305[3E020000]01                    add dword[nr_aparitii], 1
+    95 00000074 EBE8                                jmp parcurgere_caractere_fisier
+    96                                              
+    97                                          verificare_nr_aparitii:
+    98 00000076 A1[3E020000]                        mov eax, [nr_aparitii]
+    99 0000007B 8B1D[38000000]                      mov ebx, [n]
+   100                                              
+   101 00000081 39D8                                cmp eax, ebx
+   102 00000083 751C                                jne afisare_nu
+   103                                              
+   104                                              
+   105                                          afisare_da:
+   106 00000085 FF35[38000000]                      push dword [n]
+   107 0000008B FF35[34000000]                      push dword [c]
+   108 00000091 68[8A020000]                        push format_afisare_da
+   109 00000096 FF15[00000000]                      call [printf]
+   110 0000009C 83C40C                              add esp, 3 * 4
+   111                                              
+   112 0000009F EB1C                                jmp close        
+   113                                              
+   114                                          afisare_nu:
+   115 000000A1 FF35[38000000]                      push dword [n]
+   116 000000A7 FF35[34000000]                      push dword [c]
+   117 000000AD 68[42020000]                        push format_afisare_nu
+   118 000000B2 FF15[00000000]                      call [printf]
+   119 000000B8 83C40C                              add esp, 3 * 4
+   120                                              
+   121 000000BB EB00                                jmp close
+   122                                          
+   123                                          
+   124                                          
+   125                                          
+   126                                          ;inchidere fisier
+   127                                          close:
+   128 000000BD FF35[45000000]                      push dword [file_descriptor]
+   129 000000C3 FF15[00000000]                      call [fclose]
+   130 000000C9 83C404                              add esp, 4
+   131                                          
+   132                                          
+   133                                          eroare:
+   134                                          
+   135                                          
+   136                                          
+   137                                          
+   138                                          ; exit(0)
+   139 000000CC 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   140 000000CE FF15[00000000]                  call    [exit]       ; call exit to terminate the program

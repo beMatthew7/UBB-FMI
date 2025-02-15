@@ -1,0 +1,139 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, fscanf, fopen, fclose, fgets, fscanf, printf, fclose               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll  
+     9                                  import fscanf msvcrt.dll
+    10                                  import fopen msvcrt.dll
+    11                                  import fgets msvcrt.dll
+    12                                  import fscanf msvcrt.dll
+    13                                  import printf msvcrt.dll
+    14                                  import fclose msvcrt.dll  ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+    15                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    16                                  
+    17                                  ; our data is declared here (the variables needed by our program)
+    18                                  segment data use32 class=data
+    19                                      ; ...
+    20 00000000 6E756D6572652E7478-         file_name db "numere.txt", 0
+    20 00000009 7400               
+    21 0000000B 7200                        acces_mode db "r", 0
+    22 0000000D FFFFFFFF                    file_descriptor dd -1
+    23 00000011 00<rept>                    numere times 20 db 0
+    24 00000025 256400                      format_citire db "%d", 0
+    25                                      
+    26 00000028 25642000                    format_afisare db "%d ", 0
+    27                                      
+    28 0000002C FFFFFFFF<rept>              sir_nr_pare times 20 dd -1
+    29 0000007C FFFFFFFF<rept>              sir_nr_impare times 20 dd -1
+    30 000000CC 00000000                    i dd 0
+    31 000000D0 00000000                    j dd 0
+    32                                  ; our code starts here
+    33                                  segment code use32 class=code
+    34                                      start:
+    35                                          ; ...
+    36 00000000 68[0B000000]                    push dword acces_mode
+    37 00000005 68[00000000]                    push dword file_name
+    38 0000000A FF15[00000000]                  call [fopen]
+    39 00000010 83C40C                          add esp, 4 * 3
+    40                                          
+    41 00000013 83F800                          cmp eax, 0
+    42 00000016 0F84D1000000                    je final
+    43 0000001C A3[0D000000]                    mov dword [file_descriptor], eax
+    44                                          
+    45                                          citire_numere:
+    46 00000021 68[11000000]                        push dword numere
+    47 00000026 68[25000000]                        push dword format_citire
+    48 0000002B FF35[0D000000]                      push dword [file_descriptor]
+    49 00000031 FF15[00000000]                      call [fscanf]
+    50 00000037 83C40C                              add esp, 3 * 4
+    51                                              
+    52 0000003A 83F8FF                              cmp eax, -1
+    53 0000003D 745F                                je gata_citirea
+    54                                              
+    55 0000003F 8B1D[11000000]                      mov ebx, dword[numere]
+    56 00000045 C0E307                              shl bl, 7
+    57 00000048 C0EB07                              shr bl, 7
+    58 0000004B 80FB00                              cmp bl, 0
+    59 0000004E 7427                                je nr_par
+    60                                              
+    61                                              nr_impar:
+    62 00000050 8B1D[11000000]                          mov ebx, dword[numere]
+    63 00000056 8B0D[D0000000]                          mov ecx, [j]
+    64 0000005C 8999[7C000000]                          mov dword[sir_nr_impare + ecx], ebx
+    65 00000062 83C104                                  add ecx, 4
+    66 00000065 890D[D0000000]                          mov dword[j], ecx
+    67                                                  
+    68 0000006B C705[11000000]0000-                     mov dword[numere], 0
+    68 00000073 0000               
+    69 00000075 EBAA                                    jmp citire_numere
+    70                                              
+    71                                              nr_par:
+    72 00000077 8B1D[11000000]                          mov ebx, dword[numere]
+    73 0000007D 8B0D[CC000000]                          mov ecx, [i]
+    74 00000083 8999[2C000000]                          mov dword[sir_nr_pare + ecx], ebx
+    75 00000089 83C104                                  add ecx, 4
+    76 0000008C 890D[CC000000]                          mov dword[i], ecx
+    77                                                  
+    78 00000092 C705[11000000]0000-                     mov dword[numere], 0
+    78 0000009A 0000               
+    79 0000009C EB83                                    jmp citire_numere
+    80                                              
+    81                                  
+    82                                                  
+    83                                          
+    84                                          
+    85                                          
+    86                                          gata_citirea:
+    87 0000009E BE[2C000000]                    mov esi, sir_nr_pare
+    88                                          afisare_sir_nr_pare:
+    89 000000A3 8B06                                mov eax, [esi]
+    90 000000A5 83F8FF                              cmp eax, -1
+    91 000000A8 7414                                je afisare_sir_nr_impare1
+    92 000000AA 50                                  push eax
+    93 000000AB 68[28000000]                        push format_afisare
+    94 000000B0 FF15[00000000]                      call [printf]
+    95 000000B6 83C408                              add esp, 2 * 4
+    96 000000B9 83C604                              add esi, 4
+    97 000000BC EBE5                                jmp afisare_sir_nr_pare
+    98                                              
+    99                                                  
+   100                                                  
+   101                                                  
+   102                                          afisare_sir_nr_impare1:
+   103 000000BE BE[7C000000]                    mov esi, sir_nr_impare
+   104                                          afisare_sir_nr_impare:
+   105 000000C3 8B06                                mov eax, [esi]
+   106 000000C5 83F8FF                              cmp eax, -1
+   107 000000C8 7414                                je close
+   108 000000CA 50                                  push eax
+   109 000000CB 68[28000000]                        push format_afisare
+   110 000000D0 FF15[00000000]                      call [printf]
+   111 000000D6 83C408                              add esp, 2 * 4
+   112 000000D9 83C604                              add esi, 4
+   113 000000DC EBE5                                jmp afisare_sir_nr_impare
+   114                                          
+   115                                          
+   116                                          
+   117                                          close:
+   118 000000DE FF35[0D000000]                  push dword[file_descriptor]
+   119 000000E4 FF15[00000000]                  call [fclose]
+   120 000000EA 83C404                          add esp, 4
+   121                                          
+   122                                          
+   123                                          
+   124                                          
+   125                                          
+   126                                          
+   127                                          
+   128                                          final:
+   129                                          
+   130                                          
+   131                                          
+   132                                          
+   133                                      
+   134                                          ; exit(0)
+   135 000000ED 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   136 000000EF FF15[00000000]                  call    [exit]       ; call exit to terminate the program

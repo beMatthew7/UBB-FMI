@@ -1,0 +1,64 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13 00000000 616261626162636261-         sir1 db 'abababcbababcabc'   
+    13 00000009 62616263616263     
+    14                                      len1 equ ($-sir1)             
+    15 00000010 616263                      sir2 db 'abc'                 
+    16                                      len2 equ ($-sir2)              
+    17 00000013 <res 00000010>              sir3 resb len1
+    18 00000023 <res 00000001>              nr_pozitii resb 1
+    19                                      
+    20                                  segment code use32 class=code
+    21                                      start:
+    22 00000000 BE[00000000]                    mov esi, sir1
+    23 00000005 BF[13000000]                    mov edi, sir3
+    24 0000000A B910000000                      mov ecx, len1
+    25 0000000F B300                            mov bl, 0 ; index pentru sir1
+    26 00000011 BA00000000                      mov edx, 0 ; index sir2
+    27                                          
+    28                                      loop1:
+    29 00000016 FEC3                            inc bl 
+    30 00000018 83F900                          cmp ecx, 0
+    31 0000001B 7422                            je final
+    32 0000001D AC                              lodsb
+    33 0000001E 3A82[10000000]                  cmp al, [sir2 + edx]
+    34 00000024 7402                            je egal
+    35 00000026 EB14                            jmp nu_egal
+    36                                          
+    37                                          
+    38                                      egal:
+    39 00000028 42                              inc edx
+    40 00000029 83FA03                          cmp edx, len2 ; verificam daca am verificat tot subsirul
+    41 0000002C 75E8                            jne loop1 ; trecem la urmatorul caracter
+    42 0000002E 80EB03                          sub bl, len2
+    43 00000031 88D8                            mov al, bl  ; copiem indexul curent
+    44 00000033 80C303                          add bl, len2
+    45 00000036 AA                              stosb ; punem in sir3 pozitia
+    46 00000037 BA00000000                      mov edx, 0
+    47                                          
+    48                                          
+    49                                      nu_egal:
+    50 0000003C 49                              dec ecx 
+    51 0000003D EBD7                            jmp loop1
+    52                                          
+    53                                          
+    54                                          
+    55                                          
+    56                                  
+    57                                  
+    58                                      
+    59                                      final:
+    60 0000003F 81EF[13000000]                  sub edi, sir3 ; numarul de pozitii salvate
+    61 00000045 893D[23000000]                  mov [nr_pozitii], edi
+    62 0000004B 6A00                            push dword 0             
+    63 0000004D FF15[00000000]                  call [exit]
