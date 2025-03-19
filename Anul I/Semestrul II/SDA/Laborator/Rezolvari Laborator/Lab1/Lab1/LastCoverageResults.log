@@ -1,0 +1,21 @@
+[2025-03-17 13:02:10] [info] Start Program:
+Path:"C:\Users\botez\Downloads\Semestrul 2\Semestrul 2\SDA\Laborator\Rezolvari Laborator\Lab1\x64\Debug\Lab1.exe"
+Arguments:
+Working directory: "C:\Users\botez\Downloads\Semestrul 2\Semestrul 2\SDA\Laborator\Rezolvari Laborator\Lab1\Lab1\"
+Modules: Selected: C:\Users\botez\Downloads\Semestrul 2\Semestrul 2\SDA\Laborator\Rezolvari Laborator\Lab1\x64\Debug\Lab1.exe Excluded: 
+Sources: Selected: C:\Users\botez\Downloads\Semestrul 2\Semestrul 2\SDA\Laborator\Rezolvari Laborator\Lab1\Lab1 Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\botez\AppData\Local\Temp\i5ht14hb.xlb 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2025-03-17 13:02:10] [info] Module: C:\Users\botez\Downloads\Semestrul 2\Semestrul 2\SDA\Laborator\Rezolvari Laborator\Lab1\x64\Debug\Lab1.exe is selected because it matches selected pattern: C:\Users\botez\Downloads\Semestrul 2\Semestrul 2\SDA\Laborator\Rezolvari Laborator\Lab1\x64\Debug\Lab1.exe
+[2025-03-17 13:02:10] [info] ----------------------------------------------------
+[2025-03-17 13:02:10] [info] Coverage binary generated in file: C:\Users\botez\AppData\Local\Temp\i5ht14hb.xlb
+[2025-03-17 13:02:10] [info] ----------------------------------------------------

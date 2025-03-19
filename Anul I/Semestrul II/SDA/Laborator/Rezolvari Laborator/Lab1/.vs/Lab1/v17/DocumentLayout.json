@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\SDA\\Laborator\\Rezolvari Laborator\\Lab1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B61FBCAA-8A55-4AA4-864C-4B338218967F}|Lab1\\Lab1.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\SDA\\Laborator\\Rezolvari Laborator\\Lab1\\Lab1\\Matrice.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B61FBCAA-8A55-4AA4-864C-4B338218967F}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Matrice.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B61FBCAA-8A55-4AA4-864C-4B338218967F}|Lab1\\Lab1.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\SDA\\Laborator\\Rezolvari Laborator\\Lab1\\Lab1\\App.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B61FBCAA-8A55-4AA4-864C-4B338218967F}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\App.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B61FBCAA-8A55-4AA4-864C-4B338218967F}|Lab1\\Lab1.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\SDA\\Laborator\\Rezolvari Laborator\\Lab1\\Lab1\\Vector.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B61FBCAA-8A55-4AA4-864C-4B338218967F}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Vector.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Matrice.cpp",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\SDA\\Laborator\\Rezolvari Laborator\\Lab1\\Lab1\\Matrice.cpp",
+              "RelativeDocumentMoniker": "Lab1\\Matrice.cpp",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\SDA\\Laborator\\Rezolvari Laborator\\Lab1\\Lab1\\Matrice.cpp",
+              "RelativeToolTip": "Lab1\\Matrice.cpp",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-17T11:02:42.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Vector.cpp",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\SDA\\Laborator\\Rezolvari Laborator\\Lab1\\Lab1\\Vector.cpp",
+              "RelativeDocumentMoniker": "Lab1\\Vector.cpp",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\SDA\\Laborator\\Rezolvari Laborator\\Lab1\\Lab1\\Vector.cpp",
+              "RelativeToolTip": "Lab1\\Vector.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-17T11:00:31.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.cpp",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\SDA\\Laborator\\Rezolvari Laborator\\Lab1\\Lab1\\App.cpp",
+              "RelativeDocumentMoniker": "Lab1\\App.cpp",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\SDA\\Laborator\\Rezolvari Laborator\\Lab1\\Lab1\\App.cpp",
+              "RelativeToolTip": "Lab1\\App.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-17T10:51:01.454Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

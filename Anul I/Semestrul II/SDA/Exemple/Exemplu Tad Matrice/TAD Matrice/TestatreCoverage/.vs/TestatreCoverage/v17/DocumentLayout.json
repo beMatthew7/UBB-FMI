@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\SDA\\Exemple\\Exemplu Tad Matrice\\TAD Matrice\\TestatreCoverage\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{67D9FAFA-35C2-4155-909E-BFC4E3AC1A04}|TestatreCoverage\\TestatreCoverage.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\SDA\\Exemple\\Exemplu Tad Matrice\\TAD Matrice\\TestatreCoverage\\TestatreCoverage\\Testarecoverage.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{67D9FAFA-35C2-4155-909E-BFC4E3AC1A04}|TestatreCoverage\\TestatreCoverage.vcxproj|solutionrelative:TestatreCoverage\\Testarecoverage.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Testarecoverage.c",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\SDA\\Exemple\\Exemplu Tad Matrice\\TAD Matrice\\TestatreCoverage\\TestatreCoverage\\Testarecoverage.c",
+              "RelativeDocumentMoniker": "TestatreCoverage\\Testarecoverage.c",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\SDA\\Exemple\\Exemplu Tad Matrice\\TAD Matrice\\TestatreCoverage\\TestatreCoverage\\Testarecoverage.c",
+              "RelativeToolTip": "TestatreCoverage\\Testarecoverage.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-03-14T06:17:25.142Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
