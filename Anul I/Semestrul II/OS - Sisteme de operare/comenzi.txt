@@ -1,0 +1,10 @@
+ls -l
+ls -a
+ls -all
+cut -d: -f 1,2,3 /etc/passwd
+cut --delimiter=: -- fields=1,2,3
+ps -e -f
+ps -ef
+
+
+Expresii regulare(Ere)
