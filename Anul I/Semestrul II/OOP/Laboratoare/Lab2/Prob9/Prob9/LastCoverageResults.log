@@ -1,0 +1,21 @@
+[2025-03-14 09:42:23] [info] Start Program:
+Path:"C:\Users\botez\Downloads\Semestrul 2\Semestrul 2\OOP - Programare orientata pe obiect\Laboratoare\Lab2\Prob9\x64\Debug\Prob9.exe"
+Arguments:
+Working directory: "C:\Users\botez\Downloads\Semestrul 2\Semestrul 2\OOP - Programare orientata pe obiect\Laboratoare\Lab2\Prob9\Prob9\"
+Modules: Selected: C:\Users\botez\Downloads\Semestrul 2\Semestrul 2\OOP - Programare orientata pe obiect\Laboratoare\Lab2\Prob9\x64\Debug\Prob9.exe Excluded: 
+Sources: Selected: C:\Users\botez\Downloads\Semestrul 2\Semestrul 2\OOP - Programare orientata pe obiect\Laboratoare\Lab2\Prob9\Prob9 Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\botez\AppData\Local\Temp\kodzre3k.v3t 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2025-03-14 09:42:23] [info] Module: C:\Users\botez\Downloads\Semestrul 2\Semestrul 2\OOP - Programare orientata pe obiect\Laboratoare\Lab2\Prob9\x64\Debug\Prob9.exe is selected because it matches selected pattern: C:\Users\botez\Downloads\Semestrul 2\Semestrul 2\OOP - Programare orientata pe obiect\Laboratoare\Lab2\Prob9\x64\Debug\Prob9.exe
+[2025-03-14 09:42:23] [info] ----------------------------------------------------
+[2025-03-14 09:42:23] [info] Coverage binary generated in file: C:\Users\botez\AppData\Local\Temp\kodzre3k.v3t
+[2025-03-14 09:42:23] [info] ----------------------------------------------------

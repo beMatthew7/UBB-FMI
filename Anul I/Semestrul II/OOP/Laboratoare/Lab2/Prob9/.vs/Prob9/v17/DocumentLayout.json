@@ -1,0 +1,215 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\repository.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|solutionrelative:Prob9\\repository.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\tests.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|solutionrelative:Prob9\\tests.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\tests.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|solutionrelative:Prob9\\tests.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\service.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|solutionrelative:Prob9\\service.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|solutionrelative:Prob9\\console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\holiday_offer.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|solutionrelative:Prob9\\holiday_offer.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\holiday_offer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|solutionrelative:Prob9\\holiday_offer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\console.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|solutionrelative:Prob9\\console.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\validators.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|solutionrelative:Prob9\\validators.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\repository.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|solutionrelative:Prob9\\repository.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B884EFEA-C756-446A-A187-D2DAFEF9C90F}|Prob9\\Prob9.vcxproj|solutionrelative:Prob9\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "tests.h",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\tests.h",
+              "RelativeDocumentMoniker": "Prob9\\tests.h",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\tests.h",
+              "RelativeToolTip": "Prob9\\tests.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAcwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-16T14:54:20.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "service.c",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\service.c",
+              "RelativeDocumentMoniker": "Prob9\\service.c",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\service.c",
+              "RelativeToolTip": "Prob9\\service.c",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAEIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-03-14T07:39:41.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\main.c",
+              "RelativeDocumentMoniker": "Prob9\\main.c",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\main.c",
+              "RelativeToolTip": "Prob9\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-03-14T06:18:48.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "repository.h",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\repository.h",
+              "RelativeDocumentMoniker": "Prob9\\repository.h",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\repository.h",
+              "RelativeToolTip": "Prob9\\repository.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-16T13:54:24.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "tests.c",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\tests.c",
+              "RelativeDocumentMoniker": "Prob9\\tests.c",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\tests.c",
+              "RelativeToolTip": "Prob9\\tests.c",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAAAAMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-03-14T06:27:45.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "holiday_offer.h",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\holiday_offer.h",
+              "RelativeDocumentMoniker": "Prob9\\holiday_offer.h",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\holiday_offer.h",
+              "RelativeToolTip": "Prob9\\holiday_offer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-14T06:05:18.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "validators.c",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\validators.c",
+              "RelativeDocumentMoniker": "Prob9\\validators.c",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\validators.c",
+              "RelativeToolTip": "Prob9\\validators.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-03-14T06:26:40.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "repository.c",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\repository.c",
+              "RelativeDocumentMoniker": "Prob9\\repository.c",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\repository.c",
+              "RelativeToolTip": "Prob9\\repository.c",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-03-14T06:53:57.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "holiday_offer.c",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\holiday_offer.c",
+              "RelativeDocumentMoniker": "Prob9\\holiday_offer.c",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\holiday_offer.c",
+              "RelativeToolTip": "Prob9\\holiday_offer.c",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADEAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-03-14T06:53:37.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "console.h",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\console.h",
+              "RelativeDocumentMoniker": "Prob9\\console.h",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\console.h",
+              "RelativeToolTip": "Prob9\\console.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-13T15:49:16.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "console.c",
+              "DocumentMoniker": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\console.c",
+              "RelativeDocumentMoniker": "Prob9\\console.c",
+              "ToolTip": "C:\\Users\\botez\\Downloads\\Semestrul 2\\Semestrul 2\\OOP - Programare orientata pe obiect\\Laboratoare\\Lab2\\Prob9\\Prob9\\console.c",
+              "RelativeToolTip": "Prob9\\console.c",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAEcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-03-13T15:49:12.742Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
